@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--国内用户推荐使用百度CDN-->
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>jQuery Mobile 按钮图标</title>
+</head>
+<body>
+<!--jQuery Mobile 提供了一套让按钮看起来更称心如意的图标
+
+添加图标到 jQuery Mobile 按钮
+我们可以使用 ui-icon 类将图标添加到按钮上，并可以使用指定类来设置按钮位置。
+<a href="#anylink" class="ui-btn ui-icon-search ui-btn-icon-left">Search</a>
+注意： 在其他方式的按钮上，如列表或表单中的按钮需要使用 data-icon 属性。
+
+ui-icon-arrow-l	左箭头
+ui-icon-arrow-r	右箭头
+ui-icon-info	信息
+ui-icon-delete	删除
+ui-icon-back	后退
+ui-icon-audio	扬声器
+ui-icon-lock	挂锁
+ui-icon-search	搜索
+ui-icon-alert	警告
+ui-icon-grid	网格
+ui-icon-home	主页
+如需查看所有 jQuery Mobile 按钮图标的完整参考手册，请访问 jQuery Mobile 图标参考手册。
+
+定位图标  也可以规定图标定位在按钮的什么部位：顶部（top）、右侧（right）、底部（bottom）、左侧（left）。
+使用 ui-btn-icon 属性来指定位置， 如果未指定按钮图片的位置，图标将不显示。
+
+只显示图标
+如果你只想显示图标，可以使用 "notext":
+
+移除圆圈
+默认情况下，所有的图标都有一个灰色的圆圈。如果你不需要它，可以在元素中使用 "ui-nodisc-icon" 类
+
+黑色、白色按钮
+默认情况下，所有图标都是白色的。 如果需要改变图标颜色为黑色，可以在元素添加 "ui-alt-icon"
+-->
+
+<div data-role="page" id="pageone">
+    <div data-role="main" class="ui-content">
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-arrow-l ui-btn-icon-left">左边箭头图标</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-arrow-r ui-btn-icon-left">右边箭头图标</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-info ui-btn-icon-left">信息按钮</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-left">删除按钮</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-back ui-btn-icon-left">后退按钮</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-audio ui-btn-icon-left">扬声器按钮</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-lock ui-btn-icon-left">挂锁按钮</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left">搜索按钮</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-alert ui-btn-icon-left">警告按钮</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-left">网格按钮</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-left">主页按钮</a>
+
+        <p>图标定位</p>
+        <a href="#" class="ui-btn ui-icon-search ui-btn-icon-left">左侧</a>
+        <a href="#" class="ui-btn ui-icon-search ui-btn-icon-right">右侧</a>
+        <a href="#" class="ui-btn ui-icon-search ui-btn-icon-top">顶部</a>
+        <a href="#" class="ui-btn ui-icon-search ui-btn-icon-bottom">底部</a>
+
+        <hr>
+        <h2>只显示图标</h2>
+        <p>如果你只想显示图标，可以使用 "notext"</p>
+        <p>只显示图标不显示文本:</p>
+        <a href="#" class="ui-btn ui-icon-search ui-btn-icon-notext">搜索</a>
+        <p>只有图标没有文本的按钮 - 添加圆角及阴影:</p>
+        <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-notext">搜索</a>
+
+        <hr>
+        <h2>移除圆圈 </h2>
+        <p>默认情况下，所有的图标都有一个灰色的圆圈。如果你不需要它，可以在元素中使用 "ui-nodisc-icon" 类</p>
+        <p> "搜索" 按钮使用灰色使用圆圈（默认）:</p>
+        <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left ui-corner-all ui-shadow">使用圆圈（默认）</a>
+        <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow">使用圆圈（默认）</a>
+
+        <p>"搜索" 按钮使用不使用灰色圆圈(class="ui-nodisc-icon"):</p>
+        <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left ui-corner-all ui-shadow ui-nodisc-icon">不使用灰色圆圈</a>
+        <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon">不使用灰色圆圈</a>
+        <p>注意，如果你指定了 ui-nodisc-icon 类，则只显示图标，灰色背景被移除，但圆圈还在。
+
+        <hr>
+        <h2>黑色、白色按钮</h2>
+        <p>默认情况下，所有图标都是白色的。 如果需要改变图标颜色为黑色，可以在元素添加 "ui-alt-icon"</p>
+        <p>白色 "搜索" 图标 (默认):</p>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left ui-corner-all ui-shadow">白色图标(默认)</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow">白色图标(默认)</a>
+
+        <p>黑色 "搜索" 图标  (class="ui-alt-icon"):</p>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left ui-corner-all ui-shadow ui-alt-icon">黑色图标</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow ui-alt-icon">黑色图标</a>
+
+        <p>黑色 "搜索" 图标不使用灰色圆圈 (组合使用 "ui-nodisc-icon" 和 "ui-alt-icon"):</p>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon">黑色图标</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon">黑色图标</a>
+
+        <hr>
+        <h2>向容器添加 "ui-nodisc-icon" 类</h2>
+        <p>使用灰色圆环包裹的不同图标(默认):</p>
+        <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">主页</a>
+        <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow">选项</a>
+        <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow">搜索</a>
+
+        <p>不使用灰色圆环包裹的不同图标:</p>
+        <!-- Container div -->
+        <div class="ui-nodisc-icon">
+            <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">主页</a>
+            <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow">选项</a>
+            <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow">搜索</a>
+        </div>
+
+        <hr>
+        <h2>向容器添加 "ui-alt-icon" 类</h2>
+        <p>白色 "搜索" 图标 (默认):</p>
+        <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left">白色图标 (默认)</a>
+        <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow">白色图标 (默认)</a>
+
+        <p>黑色 "搜索" 图标 (class="ui-alt-icon"):</p>
+        <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left ui-alt-icon">黑色图标</a>
+        <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow ui-alt-icon">黑色图标</a>
+
+        <p>黑色 "搜索" 图标不使用灰色圆环 (class="ui-nodisc-icon ui-alt-icon"):</p>
+        <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left ui-nodisc-icon ui-alt-icon">黑色图标</a>
+        <a href="#anylink" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon">黑色图标</a>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--国内用户推荐使用百度CDN-->
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>jQuery Mobile 过渡</title>
+</head>
+<body>
+<!--jQuery Mobile 包含 CSS3 效果 选择页面打开的方式。
+
+jQuery Mobile 页面切换效果
+jQuery Mobile 提供了各种页面切换到下一个页面的效果。
+注意：为了实现页面切换效果，浏览器必须支持 CSS3 3D 切换：
+页面过渡效果可被应用于任何使用 data-transition 属性的链接或表单：
+页面切换效果可被应用于任何使用 data-transition 属性的链接或表单提交：
+<a href="#anylink" data-transition="slide">切换到第二个页面</a>
+
+在 jQuery Mobile 的所有链接上，默认使用淡入淡出的效果（如果浏览器支持）。
+-->
+
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <h2>fade 默认, 淡入到下一页</h2>
+        <p>单击链接查看淡入效果。</p>
+        <a href="#pagetwo" data-transition="fade">淡入第二个页面</a><br>
+        <p>点击链接查看淡入效果。</p>
+        <a href="#pagethree" data-transition="fade">淡入对话框页面</a><hr><br>
+
+        <h2>flip  从后向前翻转到下一页</h2>
+        <p>点击链接查看flip（翻转）效果。 flip effect.</p>
+        <a href="#pagetwo" data-transition="flip">翻转到第二页</a><br>
+        <p>点击链接查看翻转效果。</p>
+        <a href="#pagethree" data-transition="flip">翻转出对话框页面</a><hr><br>
+
+        <h3>flow 抛出当前页，进入下一页</h3>
+        <p>点击链接查看页面抛出效果。</p>
+        <a href="#pagetwo" data-transition="flow">抛出当前页，进入下一页</a><br>
+        <p>点击链接查看页面抛出效果。</p>
+        <a href="#pagethree" data-transition="flow">抛出对话框页面</a><hr><br>
+
+        <h3>pop	像弹出窗口那样转到下一页</h3>
+        <p>点击链接查看窗口弹出效果</p>
+        <a href="#pagetwo" data-transition="pop">弹出第二个页面</a><br>
+        <p>点击链接查看窗口弹出效果</p>
+        <a href="#pagethree" data-transition="pop">弹出对话框页面</a><hr><br>
+
+        <h3>slide 从右向左滑动到下一页</h3>
+        <p>点击链接查看滑动效果</p>
+        <a href="#pagetwo" data-transition="slide">滑动到第二个页面</a><br>
+        <p>点击链接查看滑动效果</p>
+        <a href="#pagethree" data-transition="slide">通过滑动效果显示对话框</a><hr><br>
+
+        <h3>slidefade 从右向左滑动并淡入到下一页</h3>
+        <p>点击链接查看右到左滑动效果</p>
+        <a href="#pagetwo" data-transition="slidefade">抛出当前页，进入下一页</a><br>
+        <p>点击链接查看右到左滑动效果</p>
+        <a href="#pagethree" data-transition="slidefade">通过滑动来显示对话框</a><hr><br>
+
+        <h3>slideup	从下到上滑动到下一页</h3>
+        <p>点击链接查看从上滑到下效果</p>
+        <a href="#pagetwo" data-transition="slideup">从上滑到下进入第二个页面</a><br>
+        <p>点击链接跳转到第一个页面。 <b>注意</b>: 淡入（fade）是默认的。</p>
+        <a href="#pagethree" data-transition="slideup">跳转到第一个页面</a>
+        <p><b>提示是：</b> 你可以通过点击顶部的 X 按钮来关闭对话框。它将自动过渡回前一个页面，与滑动的效果一致（方向相反）。</p><hr><br>
+
+        <h3>slidedown 从上到下滑动到下一页</h3>
+        <p>点击链接查看从上到下滑动效果</p>
+        <a href="#pagetwo" data-transition="slidedown">从上到下滑动到下一页</a><br>
+        <p>点击链接查看从上到下滑动效果</p>
+        <a href="#pagethree" data-transition="slidedown">通过从上到下滑动效果显示对话框</a>
+        <p><b>提示是：</b> 你可以通过点击顶部的 X 按钮来关闭对话框。它将自动过渡回前一个页面，与滑动的效果一致（方向相反）。</p><hr><br>
+
+        <h3>turn 转向下一页</h3>
+        <p>点击链接查看翻页效果</p>
+        <a href="#pagetwo" data-transition="turn">翻到下一页</a><br>
+        <p>点击链接查看翻页效果</p>
+        <a href="#pagethree" data-transition="turn">通过翻页效果显示对话框</a>
+        <p><b>提示是：</b> 你可以通过点击顶部的 X 按钮来关闭对话框。它将自动过渡回前一个页面，与滑动的效果一致（方向相反）。</p><hr><br>
+
+        <h3>none 无过渡效果</h3>
+        <p>链接设置属性 data-transition="none"</p>
+        <a href="#pagetwo" data-transition="slidedown">进入第二页 (无添加效果)</a><br>
+        <p>链接设置属性 data-transition="none"</p>
+        <a href="#pagethree" data-transition="slidedown">弹出对话框 (无添加效果)</a>
+        <p><b>提示是：</b> 你可以通过点击顶部的 X 按钮来关闭对话框。它将自动过渡回前一个页面，与滑动的效果一致（方向相反）。</p><hr><br>
+
+        <p>上面的所有效果支持后退行为。例如，如果您想要页面从左向右滑动，而不是从右向左滑动，请使用带有 "reverse" 值的 data-direction 属性。在后退按钮上这是默认的。</p>
+        <h3>第二个页面使用带有 "reverse" 值的 data-direction</h3>
+        <a href="#pagefour" data-transition="slide">切换</a><br>
+        <p>第二个页面返回链接设置属性 data-transition="none"</p>
+        <a href="#pagefive" data-transition="slide">切换</a><br>
+    </div>
+
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>点击链接返回上一个页面。<b>注意</b>: fade（淡入）效果是默认的</p>
+        <a href="#pageone">返回第一个页面</a>
+    </div>
+
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+
+<div data-role="page" data-dialog="true" id="pagethree">
+    <div data-role="header">
+        <h1>我是一个对话框！</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>点击链接跳转到第一个页面。 <b>注意</b>: 淡入（fade）是默认的。</p>
+        <a href="#pageone">跳转到第一个页面</a>
+        <p><b>提示是：</b> 你可以通过点击顶部的 X 按钮来关闭对话框。它将自动过渡回前一个页面，与淡入的效果一致。</p>
+    </div>
+
+    <div data-role="footer">
+        <h1>对话框底部文本</h1>
+    </div>
+</div>
+
+
+<div data-role="page" id="pagefour">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>点击链接返回上一个页面。<b>注意</b>: fade（淡入）效果是默认的</p>
+        <a href="#pageone" data-transition="slide" data-direction="reverse">淡入第一个页面(reversed)</a>
+    </div>
+
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+
+<div data-role="page" data-dialog="true" id="pagefive">
+    <div data-role="header">
+        <h1>我是一个对话框！</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>点击链接跳转到第一个页面。 <b>注意</b>: 淡入（fade）是默认的。</p>
+        <a href="#pageone" data-transition="slide" data-direction="reverse">跳转到第一个页面</a>
+        <p><b>提示是：</b> 你可以通过点击顶部的 X 按钮来关闭对话框。它将自动过渡回前一个页面，与淡入的效果一致。</p>
+    </div>
+
+    <div data-role="footer">
+        <h1>对话框底部文本</h1>
+    </div>
+</div>
+</body>
+</html>
