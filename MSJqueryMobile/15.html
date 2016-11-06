@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--国内用户推荐使用百度CDN-->
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>jQuery Mobile 列表视图</title>
+</head>
+<body>
+<!--
+jQuery Mobile 列表视图
+jQuery Mobile 中的列表视图是标准的HTML 列表; 有序(<ol>) 和 无序(<ul>).
+列表视图是jQuery Mobile中功能强大的一个特性。它会使标准的无序或有序列表应用更广泛。
+应用方法就是在ul或ol标签中添加data-role="listview"属性。在每个项目(<li>)中添加链接，用户可以点击它
+
+列表样式的圆角和边缘，使用 data-inset="true" 属性设置
+默认情况下，列表项的链接会自动变成一个按钮 (不需要 data-role="button")
+
+列表分隔
+列表项也可以转化为列表分割项，用来组织列表，使列表项成组。
+指定列表分割，给列表项<li>元素添加 data-role="list-divider" 属性即可
+
+如果你有一个字母顺序排列的列表，（例如一个电话簿）通过 <ol> 或者<ul> 元素的 data-autodividers="true" 属性设置可以配置为自动生成的项目的分隔
+data-autodividers="true" 可以配置为自动生成的项目的分隔。默认情况下，创建的分隔文本是列表项文本的第一个大写字母
+
+-->
+
+<div data-role="page" id="pageone">
+    <div data-role="panel" id="adelePage">
+        <h2>Adele Pitt</h2>
+        <p>Phone number: 773-528-7483</p>
+        <p>Address: 121 N. LaSalle Street
+            <br>Chicago, Illinois 60602 USA</p>
+        <p>Email: thebestadelepitt@gmail.com</p>
+        <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-b ui-icon-delete ui-btn-icon-left">Close</a>
+    </div>
+    <div data-role="panel" id="billyPage">
+        <h2>Billy Smith</h2>
+        <p>Phone number: 212-330-5200</p>
+        <p>Address: 350 Fifth Avenue
+            <br>New York, NY 10118-3299 USA</p>
+        <p>Email: theoneandonlybilly@gmail.com</p>
+        <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-b ui-icon-delete ui-btn-icon-left">Close</a>
+    </div>
+
+    <div data-role="header">
+        <h1>Page Header</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <h2>有序列表：</h2>
+        <ol data-role="listview">
+            <li><a href="#">列表项</a></li>
+            <li><a href="#">列表项</a></li>
+            <li><a href="#">列表项</a></li>
+        </ol>
+        <h2>无序列表：</h2>
+        <ul data-role="listview">
+            <li><a href="#">列表项</a></li>
+            <li><a href="#">列表项</a></li>
+            <li><a href="#">列表项</a></li>
+        </ul>
+        <br>
+        <h2>带有 data-inset="true" 属性的列表:</h2>
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#">列表项</a></li>
+            <li><a href="#">列表项</a></li>
+            <li><a href="#">列表项</a></li>
+        </ul>
+
+        <p>列表项也可以转化为列表分割项，用来组织列表，使列表项成组</p>
+        <h2>List Dividers</h2>
+        <ul data-role="listview">
+            <li data-role="list-divider">欧洲</li>
+            <li><a href="#">德国</a></li>
+            <li><a href="#">英国</a></li>
+            <li data-role="list-divider">亚洲</li>
+            <li><a href="#">中国</a></li>
+            <li><a href="#">印度</a></li>
+            <li data-role="list-divider">非洲</li>
+            <li><a href="#">埃及</a></li>
+            <li><a href="#">南非</a></li>
+        </ul>
+        <br><br>
+        <p>data-autodividers="true" 属性通过对列表项文本的首字母进行大写来创建分隔符。</p>
+        <h2>我的通讯录</h2>
+        <ul data-role="listview" data-autodividers="true" data-inset="true">
+            <li><a href="#">Adele</a></li>
+            <li><a href="#">Agnes</a></li>
+            <li><a href="#">Albert</a></li>
+            <li><a href="#">Billy</a></li>
+            <li><a href="#">Bob</a></li>
+            <li><a href="#">Calvin</a></li>
+            <li><a href="#">Cameron</a></li>
+            <li><a href="#">Chloe</a></li>
+            <li><a href="#">Christina</a></li>
+            <li><a href="#">Diana</a></li>
+            <li><a href="#">Gabriel</a></li>
+            <li><a href="#">Glen</a></li>
+            <li><a href="#">Ralph</a></li>
+            <li><a href="#">Valarie</a></li>
+        </ul>
+
+        <br><br>
+        <h2>只读列表</h2>
+        <p>如何创建一个不带链接的列表 (不会是个按钮且不可点击)</p>
+        <h2>有序列表：</h2>
+        <ol data-role="listview">
+            <li>列表项目</li>
+            <li>列表项目</li>
+            <li>列表项目</li>
+        </ol>
+        <h2>无序列表：</h2>
+        <ul data-role="listview">
+            <li>列表项目</li>
+            <li>列表项目</li>
+            <li>列表项目</li>
+        </ul>
+
+        <br><br>
+        <h2>面板 - 如何在列表中插入面板</h2>
+        <h2>我的通讯录</h2>
+        <ul data-role="listview" data-autodividers="true" data-inset="true">
+            <li><a href="#adelePage">Adele</a></li>
+            <li><a href="#billyPage">Billy</a></li>
+        </ul>
+
+        <div data-role="footer">
+            <h1>页面底部</h1>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

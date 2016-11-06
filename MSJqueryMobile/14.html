@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--国内用户推荐使用百度CDN-->
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>jQuery Mobile 网格</title>
+</head>
+<body>
+<!--jQuery Mobile 提供了一套基于 CSS 的分列布局。然而，在移动设备上，由于考虑手机的屏幕宽度狭窄，一般不建议使用分栏分列布局。
+但有时您想要将较小的元素（如按钮或导航标签）并排地排列在一起，就像是在一个表格中一样。这种情况下，推荐使用分列布局。
+网格中的列是等宽的（合计是 100%），没有边框、背景、margin 或 padding。
+
+响应式网格
+在小屏幕中，不建议一行中并排太多按钮（文本会缩短）。
+我们在容器使用 ui-responsive 类来创建响应式网格
+-->
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>响应式布局</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <h3>慢慢重置窗口大小。布局会根据浏览器的宽度变化自适应大小。</h3>
+        <div class="ui-grid-b ui-responsive">
+            <div class="ui-block-a">
+                <a href="#" class="ui-btn ui-corner-all ui-shadow">第一列按钮</a><br>
+                <span>第一列: 这是一些文本。 这是一些文本。 这是一些文本。 这是一些文本。 这是一些文本。</span>
+            </div>
+            <div class="ui-block-b">
+                <a href="#" class="ui-btn ui-corner-all ui-shadow">第二列按钮</a><br>
+                <span>第二列: 这是一些文本。 这是一些文本。 这是一些文本。 这是一些文本。</span>
+            </div>
+            <div class="ui-block-c">
+                <a href="#" class="ui-btn ui-corner-all ui-shadow">第三列按钮</a><br>
+                <span>第三列: 这是一些文本。 这是一些文本。 这是一些文本。 这是一些文本。</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

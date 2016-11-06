@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6721abf-04cb-4807-ad43-5fad2ebd433a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MSJqueryMobile/09.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MSJqueryMobile/10.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MSJqueryMobile/11.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MSJqueryMobile/12.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MSJqueryMobile/13.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MSJqueryMobile/08.html" afterPath="$PROJECT_DIR$/MSJqueryMobile/08.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MSJqueryMobile/14.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MSJqueryMobile/15.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MSJqueryMobile.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,11 +79,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="13.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="13.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MSJqueryMobile/13.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+            <state relative-caret-position="180">
+              <caret line="12" column="0" selection-start-line="3" selection-start-column="4" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="14.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MSJqueryMobile/14.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="0" selection-start-line="3" selection-start-column="3" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="15.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MSJqueryMobile/15.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="115" column="25" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -124,6 +140,8 @@
         <option value="$PROJECT_DIR$/MSJqueryMobile/11.html" />
         <option value="$PROJECT_DIR$/MSJqueryMobile/12.html" />
         <option value="$PROJECT_DIR$/MSJqueryMobile/13.html" />
+        <option value="$PROJECT_DIR$/MSJqueryMobile/14.html" />
+        <option value="$PROJECT_DIR$/MSJqueryMobile/15.html" />
       </list>
     </option>
   </component>
@@ -134,8 +152,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="111" />
-    <option name="y" value="147" />
+    <option name="x" value="110" />
+    <option name="y" value="88" />
     <option name="width" value="1011" />
     <option name="height" value="633" />
   </component>
@@ -220,15 +238,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478408887260</updated>
-      <workItem from="1478408898123" duration="3043000" />
+      <workItem from="1478408898123" duration="3937000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3043000" />
+    <option name="totallyTimeSpent" value="3937000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="111" y="147" width="1011" height="633" extended-state="1" />
+    <frame x="110" y="88" width="1011" height="633" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24949495" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -317,8 +335,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MSJqueryMobile/13.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="3" selection-start-column="4" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MSJqueryMobile/14.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="3" selection-start-column="3" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MSJqueryMobile/15.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="115" column="25" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
           <folding />
         </state>
       </provider>
