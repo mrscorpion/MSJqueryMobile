@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--国内用户推荐使用百度CDN-->
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>jQuery Mobile 方向改变事件</title>
+
+    <script>
+        $(document).on("pagecreate",function(event){
+            $(window).on("orientationchange",function(event){
+                alert("方向改变为: " + event.orientation);
+
+                if(window.orientation == 0)
+                {
+                    $("p").text("方向已经变为 portrait!").css({"background-color":"yellow","font-size":"300%"});
+                }
+                else
+                {
+                    $("p").text("方向已经变为 landscape!").css({"background-color":"pink","font-size":"200%"});
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<!--jQuery Mobile 方向改变（orientationchange）事件
+当用户垂直或水平旋转移动设备时，触发方向改变（orientationchange）事件。
+如需使用方向改变（orientationchange）事件，请附加它到 window 对象
+$(window).on("orientationchange",function(){
+	alert("方向有改变!");
+});
+回调函数可有一个参数，event 对象，返回移动设备的方向："纵向"（设备保持在垂直位置）或"横向"（设备保持在水平位置）
+
+由于方向改变（orientationchange）事件绑定到 window 对象，
+我们可以使用 window.orientation 属性来设置不同的样式，以便区分纵向和横向的视图
+window.orientation 属性针对纵向视图返回 0，针对横向视图返回 90 或 -90。
+-->
+
+<div data-role="page">
+    <div data-role="header">
+        <h1>orientationchange 事件</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>请试着旋转您的设备！</p>
+        <p><b>注释：</b>您必须使用移动设备或者移动模拟器来查看该事件的效果。</p>
+    </div>
+
+    <div data-role="footer">
+        <h1>页脚文本</h1>
+    </div>
+</div>
+</body>
+</html>

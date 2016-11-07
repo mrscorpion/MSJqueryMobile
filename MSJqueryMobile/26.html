@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--国内用户推荐使用百度CDN-->
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>jQuery Mobile 事件</title>
+    <script>
+        $(document).on("pagecreate","#pageone",function(){
+            $("p").on("click",function(){
+                $(this).hide();
+            });
+        });
+    </script>
+</head>
+<body>
+
+<!--
+初始化 jQuery Mobile 事件
+在学习jQuery时我们学到了用$(document).ready()来使你的jQuery代码脚本在DOM元素加载完成后才开始执行
+但是，在 jQuery Mobile 中, 使用pageinit 事件来设置代码脚本在DOM元素加载完成后开始执行，
+所以要在任何新页面加载并创建是执行脚本，就需要绑定pageinit事件。
+第二个参数 ("#pageone")为指定事件的页面id
+
+注意： jQuery on() 方法用于绑定事件到选中的元素上。
+-->
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>页眉文本</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <h1>jQuery Mobile pagecreate 事件</h1>
+        <p>注意： jQuery on() 方法用于绑定事件到选中的元素上。</p>
+        <p>如果您点击我，我会消失。</p>
+        <p>点击我，我会消失。</p>
+        <p>点击我，我也会消失。</p>
+    </div>
+
+    <div data-role="footer">
+        <h1>页脚文本</h1>
+    </div>
+</div>
+</body>
+</html>

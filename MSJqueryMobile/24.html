@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--国内用户推荐使用百度CDN-->
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>添加新主题</title>
+
+    <style>
+        .ui-bar-f {
+            color: red;
+            background-color: yellow;
+        }
+
+        .ui-body-f {
+            font-weight: bold;
+            color: white;
+            background-color: purple;
+        }
+
+        .ui-page-theme-f {
+            font-weight: bold;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+jQuery Mobile 可以在移动页面添加新主题。
+通过修改 CSS 文件来添加或编辑新主题(如果你已经下载了 jQuery Mobile)。
+你只需要拷贝样式模块，然后重命令字母类名（c-z）,并在样式中添加你喜欢的颜色和字体。
+你也可以在 HTML 文档中添加主题的新样式， 工具条添加类： ui-bar-(a-z) ，
+文本内容添加类: ui-body-(a-z) ,页面添加类：ui-page-theme-(a-z) 。
+
+
+在之前的 jQuery Mobile 版本中, 使用 JavaScript 来为元素继承父主题样式。
+到了 1.4 版本后，框架更注重性能上的提升，已不再使用 JavaScript 来继承，而是使用纯 CSS。
+
+jQuery Mobile 团队为此已经创建了一个工具，地址为 ThemeRoller。
+你可以使用该工具来升级旧的主题，使其兼容新的版本。
+-->
+<div data-role="page" data-theme="f">
+    <div data-role="header" data-theme="f">
+        <h1>应用 "f" 主题的标题样式</h1>
+    </div>
+
+    <div data-role="main" class="ui-content ui-body-f">
+        <p>应用新的 "f" 主题的内容样式！</p>
+    </div>
+</div>
+
+</body>
+</html>
