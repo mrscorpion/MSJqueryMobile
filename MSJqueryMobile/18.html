@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--国内用户推荐使用百度CDN-->
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>过滤折叠列表</title>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>过滤列表</h1>
+    </div>
+
+    <h1>过滤折叠列表 - 如何过滤折叠的列表</h1>
+    <div data-role="main" class="ui-content">
+        <form>
+            <input data-type="search" id="filterCollapsibles">
+        </form>
+        <div data-role="collapsibleset" data-filter="true" data-inset="true" id="myFilter" data-input="#filterCollapsibles">
+            <div data-role="collapsible" data-filtertext="Cities">
+                <h3>城市</h3>
+                <ul data-role="listview" data-inset="false">
+                    <li>Copenhagen</li>
+                    <li>Mexico City</li>
+                    <li>Oslo</li>
+                    <li>Paris</li>
+                </ul>
+            </div>
+            <div data-role="collapsible" data-filtertext="Countries">
+                <h3>国家</h3>
+                <ul data-role="listview" data-inset="false">
+                    <li>Denmark</li>
+                    <li>France</li>
+                    <li>Mexico</li>
+                    <li>Norway</li>
+                </ul>
+            </div>
+            <div data-role="collapsible" data-filtertext="Days">
+                <h3>周</h3>
+                <ul data-role="listview" data-inset="false">
+                    <li>Monday</li>
+                    <li>Tuesday</li>
+                    <li>Wednesday</li>
+                </ul>
+            </div>
+            <div data-role="collapsible" data-filtertext="Months">
+                <h3>月</h3>
+                <ul data-role="listview" data-inset="false">
+                    <li>January</li>
+                    <li>February</li>
+                    <li>March</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <hr>
+        <h1>过滤表格 - 如何过滤表格内容</h1>
+        <form>
+            <input id="filterTable-input" data-type="search" placeholder="Search For Customers...">
+        </form>
+        <table data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow" id="myTable" data-filter="true" data-input="#filterTable-input">
+            <thead>
+            <tr>
+                <th data-priority="6">CustomerID</th>
+                <th>CustomerName</th>
+                <th data-priority="1">ContactName</th>
+                <th data-priority="2">Address</th>
+                <th data-priority="3">City</th>
+                <th data-priority="4">PostalCode</th>
+                <th data-priority="5">Country</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Obere Str. 57</td>
+                <td>Berlin</td>
+                <td>12209</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Antonio Moreno Taquer</td>
+                <td>Antonio Moreno</td>
+                <td>Mataderos 2312</td>
+                <td>Mico D.F.</td>
+                <td>05023</td>
+                <td>Mexico</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Around the Horn</td>
+                <td>Thomas Hardy</td>
+                <td>120 Hanover Sq.</td>
+                <td>London</td>
+                <td>WA1 1DP</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Berglunds snabbk</td>
+                <td>Christina Berglund</td>
+                <td>Berguvsven 8</td>
+                <td>Lule</td>
+                <td>S-958 22</td>
+                <td>Sweden</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <hr>
+        <h1>过滤div元素 - 如何过滤 div 元素中包含的子 p 元素</h1>
+        <form>
+            <input data-type="search" id="divOfPs-input">
+        </form>
+        <div class="elements" data-filter="true" data-input="#divOfPs-input">
+            <p><strong>These</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+            <p><strong>p elements</strong> nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
+            <p><strong>are</strong> et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est</p>
+            <p><strong>filterable</strong> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur</p>
+        </div>
+    </div>
+
+    <div data-role="footer">
+        <h1>文本底部</h1>
+    </div>
+</div>
+</body>
+</html>

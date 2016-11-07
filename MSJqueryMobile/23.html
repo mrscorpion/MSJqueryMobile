@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--国内用户推荐使用百度CDN-->
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>jQuery Mobile 主题</title>
+</head>
+<body>
+<!--
+jQuery Mobile 提供了 2 种不同的主题样式, 从 "a" 到 "b" - 每一种主题的按钮，工具条，内容块等等颜色都不一致，每个主题的视觉效果也不一样。
+通过设置元素的data-theme属性可以自定义应用的外观:
+a	页面为灰色背景黑色文字
+头部与底部均为灰色背景黑色文字
+按钮为灰色背景黑色文字
+激活的按钮和链接为白色文本蓝色背景
+input 输入框中 placeholder 属性值为浅灰色，value 值为黑色
+
+b	页面为黑色背景白色文字
+头部与底部均为黑色背景白色文字
+按钮为白色文字木炭背景
+激活的按钮和链接为白色文本蓝色背景
+input 输入框中 placeholder 属性值为浅灰色，value 值为白色
+
+按钮样式使用 class="ui-btn",使用 "ui-btn-a|b" 类设置按钮为灰色（默认）或黑色
+"a" 主题的样式用于大多数元素，子元素通常继承父元素的样式。
+-->
+
+<!-- 页面1 -->
+<div data-role="page" id="pageone" data-theme="a">
+    <div data-role="header">
+        <a href="#" class="ui-btn ui-btn-b ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">主页</a>
+        <h1>欢迎访问我的主页</h1>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left">搜索</a>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>一些文本..</p>
+        <a href="#pagetwo">标准文本链接</a>
+        <a href="#pagetwo" class="ui-btn">链接按钮</a>
+        <p>列表:</p>
+        <ul data-role="listview" data-autodividers="true" data-inset="true">
+            <li><a href="#">Adele</a></li>
+            <li><a href="#">Billy</a></li>
+        </ul>
+        <label for="fullname">输入框:</label>
+        <input type="text" name="fullname" id="fullname" placeholder="名字..">
+        <label for="switch">切换开关:</label>
+        <select name="switch" id="switch" data-role="slider">
+            <option value="on">On</option>
+            <option value="off" selected>Off</option>
+        </select>
+    </div>
+
+    <hr>
+    <div data-role="main" class="ui-content">
+        <p>以下按钮仅仅是用于演示，不会有任何效果。</p>
+    </div>
+
+    <div data-role="footer" style="text-align:center;">
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="#" class="ui-btn ui-btn-b ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Facebook上关注我</a>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Twitter上关注我</a>
+            <a href="#" class="ui-btn ui-btn-b ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Instagram上关注我</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- 页面2 -->
+<div data-role="page" id="pagetwo" data-theme="b">
+    <div data-role="header">
+        <h1>页面头部</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>一些文本..</p>
+        <a href="#pageone">标准文本链接</a>
+        <a href="#pageone" class="ui-btn">链接按钮</a>
+        <p>列表:</p>
+        <ul data-role="listview" data-autodividers="true" data-inset="true">
+            <li><a href="#pagethree">Adele</a></li>
+            <li><a href="#">Billy</a></li>
+        </ul>
+        <label for="fullname2">输入框:</label>
+        <input type="text" name="fullname" id="fullname2" placeholder="名字..">
+        <label for="switch2">切换开关:</label>
+        <select name="switch" id="switch2" data-role="slider">
+            <option value="on">On</option>
+            <option value="off" selected>Off</option>
+        </select>
+    </div>
+
+    <div data-role="footer">
+        <h1>页面底部</h1>
+    </div>
+</div>
+
+
+<!-- 页面3 主题头部和底部 -->
+<div data-role="page" id="pagethree">
+    <div data-role="header" data-theme="b">
+        <h1>主题头部和底部</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>文本内容</p>
+        <a href="#pagetwo" class="ui-btn">按钮</a>
+        <p>插入 <a href="#">链接</a> !</p>
+
+        <p>欢迎!</p>
+        <a href="#pagefour" class="ui-btn">跳转到页面二</a>
+
+        <h2>主题按钮 - 灰色按钮 和 黑色按钮</h2>
+        <p>普通按钮:</p>
+        <a href="#" class="ui-btn">灰色按钮 (默认)</a>
+        <a href="#" class="ui-btn ui-btn-b">黑色按钮</a>
+        <br>
+
+        <p>内联按钮:</p>
+        <a href="#" class="ui-btn ui-btn-inline">灰色按钮 (默认)</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-btn-b">黑色按钮</a>
+
+        <p>主题图标</p>
+        <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-notext">Search</a>
+        <a href="#" class="ui-btn ui-btn-b ui-shadow ui-corner-all ui-icon-search ui-btn-icon-notext">Search</a>
+
+        <h2>主题弹窗</h2>
+        <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-b ui-btn-inline ui-corner-all">Show Popup</a>
+        <div data-role="popup" id="myPopup" class="ui-content" data-theme="b">
+            <a href="#" data-rel="back" class="ui-btn ui-btn-a ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+            <p>我是主题弹窗!.</p>
+            <p>在我右上角有个关闭按钮</p>
+            <p><b>提示：</b> 你可以点击弹窗的外部区域来关闭弹窗。</p>
+        </div>
+    </div>
+
+    <div data-role="footer" data-theme="b">
+        <h1>主题头部和底部</h1>
+    </div>
+</div>
+
+
+<!-- 弹框页面4 主题对话框的头部底部-->
+<div data-role="page" data-dialog="true" id="pagefour">
+    <div data-role="header" data-theme="b">
+        <h1>主题对话框的头部底部</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>我是一个主题对话框 - 我的头部和底部是黑色的!</p>
+        <a href="#pageone" class="ui-btn ui-btn-inline">跳转到页面一</a>
+    </div>
+
+    <div data-role="footer" data-theme="b">
+        <h1>主题对话框的头部底部</h1>
+    </div>
+</div>
+</body>
+</html>

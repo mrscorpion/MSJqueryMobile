@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--国内用户推荐使用百度CDN-->
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>jQuery Mobile 列表内容</title>
+</head>
+<body>
+
+<!--jQuery Mobile 列表图标
+默认情况下每个列表项都会包含一个箭头图标 "carat-r" (右箭头)。如果要修改这个图标可以使用 data-icon 属性
+
+16x16 图标
+如果你想在你的列表添加标准的 16x16px 的图标, 可以在列表项中添加 <img> 元素，并使用 "ui-li-icon" 类
+
+jQuery Mobile 列表缩略图
+大于 16x16px 的图像，请在链接中添加 <img> 元素。
+jQuery Mobile 将自动缩放图像到 80x80px
+
+分割按钮
+在JQuery Mobile的列表中，有时需要对选项内容做两个不同的操作，这时，需要对选项中的链接按钮进行分割。实现分割的方法是在<li>元素中再增加一个<a>元素，便可以在页面实现分割效果。
+jQuery Mobile 会自动设置第二个链接为蓝色箭头的图标，图标的链接文字（如果有的话）将在用户将鼠标悬停在 图标时显示
+
+气泡数字
+气泡数字是用来显示列表项相关的数字，如在一个邮箱的邮件
+如需添加气泡数字，请使用行内元素，比如 <span>，设置 class "ui-li-count" 属性并添加数字
+注意：显示一个正确的气泡数字，必须修改编程方式。
+-->
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <h2>列表图标: 改变列表项的默认链接图标</h2>
+        <p>如何设置列表项的默认链接图标(默认是右箭头)</p>
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#">默认是右箭头</a></li>
+            <li data-icon="plus"><a href="#">data-icon="plus"</a></li>
+            <li data-icon="minus"><a href="#">data-icon="minus"</a></li>
+            <li data-icon="delete"><a href="#">data-icon="delete"</a></li>
+            <li data-icon="location"><a href="#">data-icon="location"</a></li>
+            <li data-icon="false"><a href="#">data-icon="false"</a></li>
+            <!--列表添加标准的 16x16px 的图标-->
+            <li><a href="#"><img src="us.png" alt="USA" class="ui-li-icon">USA</a></li>
+            <!--大于 16x16px 的图像， 自动缩放图像到 80x80px-->
+            <li><a href="#"><img src="chrome.png"></a></li>
+            <!--使用标准的HTML添加列表信息-->
+            <li>
+                <a href="#">
+                    <img src="chrome.png">
+                    <h2>Google Chrome</h2>
+                    <p>Google Chrome 免费的开源 web 浏览器。发布于 2008 年。</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="chrome.png">
+                    <h2>分割按钮</h2>
+                    <p>实现分割的方法是在li元素中再增加一个a元素，便可以在页面实现分割效果</p>
+                </a>
+                <a href="#">文本信息</a>
+            </li>
+        </ul>
+
+        <h2>请点击齿轮图标！</h2>
+        <ul data-role="listview" data-inset="true">
+            <li data-role="divider">浏览器</li>
+            <li>
+                <a href="#">
+                    <img src="chrome.png">
+                    <h2>Google Chrome</h2>
+                    <p>Google Chrome 是免费的开源 web 浏览器。发布于 2008 年。</p>
+                </a>
+                <a href="#download" data-transition="pop" data-icon="gear">下载浏览器</a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="chrome.png">
+                    <h2>Mozilla Firefox</h2>
+                    <p>Firefox 是来自 Mozilla 的 web 浏览器。发布于 2004 年。</p>
+                </a>
+                <a href="#download" data-transition="pop" data-icon="gear">下载浏览器</a>
+            </li>
+        </ul>
+
+        <h2>我的邮箱</h2>
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#">收件箱<span class="ui-li-count">25</span></a></li>
+            <li><a href="#">发件箱<span class="ui-li-count">432</span></a></li>
+            <li><a href="#">垃圾箱<span class="ui-li-count">7</span></a></li>
+        </ul>
+
+        <h2>弹窗列表 - 如何创建弹窗列表</h2>
+        <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-gear ui-btn-icon-left">选择一个城市</a>
+        <div data-role="popup" id="myPopup">
+            <ul data-role="listview" data-inset="true" style="min-width:250px;">
+                <li data-role="list-divider">Europe</li>
+                <li><a href="#">Norway</a></li>
+                <li><a href="#">Germany</a></li>
+                <li data-role="list-divider">Asia</li>
+                <li><a href="#">India</a></li>
+                <li><a href="#">Thailand</a></li>
+                <li data-role="list-divider">Africa</li>
+                <li><a href="#">Zimbabwe</a></li>
+                <li><a href="#">Uganda</a></li>
+            </ul>
+        </div>
+
+        <h2>可折叠弹窗列表</h2>
+        <p>如何创建可折叠弹窗列表。</p>
+        <a href="#myPopup2" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-gear ui-btn-icon-left">选择一个名字</a>
+
+        <div data-role="popup" id="myPopup2" class="ui-content">
+            <h3>Choose a name</h3>
+            <div data-role="collapsible-set" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" style="width:270px;">
+                <div data-role="collapsible">
+                    <h4>A</h4>
+                    <ul data-role="listview">
+                        <li><a href="#">Adele</a></li>
+                        <li><a href="#">Agnes</a></li>
+                    </ul>
+                </div>
+
+                <div data-role="collapsible">
+                    <h2>B</h2>
+                    <ul data-role="listview">
+                        <li><a href="#">Billy</a></li>
+                        <li><a href="#">Bob</a></li>
+                    </ul>
+                </div>
+
+                <div data-role="collapsible">
+                    <h4>C</h4>
+                    <ul data-role="listview">
+                        <li><a href="#">Calvin</a></li>
+                        <li><a href="#">Cameron</a></li>
+                        <li><a href="#">Chloe</a></li>
+                        <li><a href="#">Christina</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--可折叠的列表-->
+        <h2>可折叠的列表</h2>
+        <p>如何创建显示/隐藏的列表</p>
+        <div data-role="collapsible">
+            <h4>A</h4>
+            <ul data-role="listview">
+                <li><a href="#">Adele</a></li>
+                <li><a href="#">Agnes</a></li>
+            </ul>
+        </div>
+
+        <div data-role="collapsible">
+            <h4>B</h4>
+            <ul data-role="listview">
+                <li><a href="#">Billy</a></li>
+                <li><a href="#">Bob</a></li>
+            </ul>
+        </div>
+
+        <div data-role="collapsible">
+            <h4>C</h4>
+            <ul data-role="listview">
+                <li><a href="#">Calvin</a></li>
+                <li><a href="#">Cameron</a></li>
+                <li><a href="#">Chloe</a></li>
+                <li><a href="#">Christina</a></li>
+            </ul>
+        </div>
+
+        <!--如何制作一个日历-->
+        <h2>我的日历 - 如何制作一个日历</h2>
+        <ul data-role="listview" data-inset="true">
+            <li data-role="list-divider">星期三, 1 月 2 日, 2013 <span class="ui-li-count">2</span></li>
+            <li><a href="#">
+                <h2>医生</h2>
+                <p><b>To Peter Griffin</b></p>
+                <p>Well, Mr. Griffin, I've looked into physical results.</p>
+                <p>Ah, Mr. Griffin, I'm not quite sure how to say this. Kim Bassinger? Bass singer? Bassinger?</p>
+                <p>But now, onto the cancer</p>
+                <p>You are a Cancer, right? You were born in July? Now onto these test results.</p>
+                <p class="ui-li-aside">Re: Appointment</p></a>
+            </li>
+            <li><a href="#">
+                <h2>Glen Quagmire</h2>
+                <p>Don't forget me this weekend!</p>
+                <br>
+                <p>- giggity giggity goo</p>
+                <p class="ui-li-aside">Re: Camping</p></a>
+            </li>
+            <li data-role="list-divider">周二, 1 月 1 日, 2013 <span class="ui-li-count">1</span></li>
+            <li><a href="#">
+                <h2>Louis</h2>
+                <p><b>Happy Girl!</b></p>
+                <p>Thank you so much, Peter!!</p>
+                <p class="ui-li-aside">Re: Christmas Gifts</p></a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+
+<div data-role="page" id="download" data-dialog="true">
+    <div data-role="main" class="ui-content">
+        <h3>拆分按钮实例</h3>
+        <p>该按钮仅供演示。</p>
+        <a href="#" class="ui-btn ui-btn-inline ui-btn-b ui-shadow ui-corner-all ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini" data-rel="back">下载</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-inline ui-mini" data-rel="back">取消</a>
+    </div>
+</div>
+
+</body>
+</html>

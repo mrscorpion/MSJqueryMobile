@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--国内用户推荐使用百度CDN-->
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>jQuery Mobile 表单输入元素</title>
+</head>
+<body>
+
+<!--jQuery Mobile 文本输入框
+输入字段是通过标准的 HTML 元素编码的，jQuery Mobile 将为它们添加样式使其看起来更具吸引力，
+在移动设备上更易使用。您也能使用新的 HTML5 的 <input> 类型
+
+提示：请使用 placeholder 来指定一个简短的描述，用来描述输入字段的期望值
+
+文本域
+对于多行文本输入可使用 <textarea> 。
+注意：当您键入一些文本时，文本域会自动调整大小以适应新增加的行。
+
+搜索输入框
+type="search" 类型的输入框是在 HTML5 中新增的，它是为输入搜索定义文本字段
+
+单选按钮
+当用户在有限数量的选择中仅选取一个选项时，使用单选按钮。
+为了创建一系列单选按钮，请添加带有 type="radio" 的 input 以及相应的 label。把单选按钮包围在 <fieldset> 元素内。您也可以添加一个 <legend> 元素来定义 <fieldset> 的标题。
+提示：请使用 data-role="controlgroup" 来把按钮组合在一起
+
+复选框
+当用户在有限数量的选择中选取一个或多个选项时，使用复选框
+
+您也可以用一个 field 容器包围 <fieldset>
+-->
+<div data-role="page" id="pageone">
+    <div data-role="panel" id="overlayPanel" data-display="overlay">
+        <h2>覆盖面板</h2>
+        <p>你可以使用按下 Esc 键、点击面板外部区域、通过滑动或点击下面按钮来关闭面板：</p>
+        <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">关闭面板</a>
+    </div>
+    <div data-role="panel" id="revealPanel" data-display="reveal">
+        <h2>滑出面板</h2>
+        <p>你可以使用按下 Esc 键、点击面板外部区域、通过滑动或点击下面按钮来关闭面板：</p>
+        <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">关闭面板</a>
+    </div>
+    <div data-role="panel" id="pushPanel" data-display="push">
+        <h2>推动面板</h2>
+        <p>你可以使用按下 Esc 键、点击面板外部区域、通过滑动或点击下面按钮来关闭面板：</p>
+        <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">关闭面板</a>
+    </div>
+
+    <div data-role="header">
+        <a href="#overlayPanel" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">主页</a>
+        <h1>欢迎访问我的主页</h1>
+        <a href="#revealPanel" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left">搜索</a>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <form method="post" action="demo_form.php">
+            <div class="ui-field-contain">
+                <label for="fullname">全名：</label>
+                <input type="text" name="fullname" id="fullname">
+                <label for="bday">生日：</label>
+                        <input type="date" name="bday" id="bday">
+                <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" placeholder="你的电子邮箱..">
+            </div>
+
+            <p><b>注意：</b> 文本框会根据你的输入自动调整文本框的高度，你可以在以上文本框输入内容，查看效果。</p>
+            <div class="ui-field-contain">
+                <label for="info">附加信息:</label>
+                <textarea name="addinfo" id="info"></textarea>
+            </div>
+
+            <h2>搜索输入框</h2>
+            <div class="ui-field-contain">
+                <label for="search">搜索：</label>
+                <input type="search" name="search" id="search" placeholder="搜索内容...">
+            </div>
+
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+
+        <h2>单选按钮</h2>
+        <form method="post" action="demoform.php">
+            <fieldset data-role="controlgroup">
+                <legend>请选择您的性别：</legend>
+                <label for="male">男性</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="female">女性</label>
+                <input type="radio" name="gender" id="female" value="female">
+            </fieldset>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+
+        <h2>复选框</h2>
+        <form method="post" action="demoform.php">
+            <fieldset data-role="controlgroup">
+                <legend>请选择您喜爱的颜色：</legend>
+                <label for="red">红色</label>
+                <input type="checkbox" name="favcolor" id="red" value="red">
+                <label for="green">绿色</label>
+                <input type="checkbox" name="favcolor" id="green" value="green">
+                <label for="blue">蓝色</label>
+                <input type="checkbox" name="favcolor" id="blue" value="blue">
+            </fieldset>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+
+        <h2>如需水平组合单选按钮或复选框，请使用 data-type="horizontal"</h2>
+        <form method="post" action="demoform.php">
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>请选择您的性别：</legend>
+                <label for="male1">男性</label>
+                <input type="radio" name="gender" id="male1" value="male">
+                <label for="female1">女性</label>
+                <input type="radio" name="gender" id="female1" value="female">
+            </fieldset>
+
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>请选择您喜爱的颜色：</legend>
+                <label for="red1">红色</label>
+                <input type="checkbox" name="favcolor" id="red1" value="red">
+                <label for="green1">绿色</label>
+                <input type="checkbox" name="favcolor" id="green1" value="green">
+                <label for="blue1">蓝色</label>
+                <input type="checkbox" name="favcolor" id="blue1" value="blue">
+            </fieldset>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+
+        <h2>您也可以用一个 field 容器包围 fieldset</h2>
+        <form method="post" action="demoform.php">
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup">
+                    <legend>请选择您的性别：</legend>
+                    <label for="male2">男性</label>
+                    <input type="radio" name="gender" id="male2" value="male">
+                    <label for="female2">女性</label>
+                    <input type="radio" name="gender" id="female2" value="female">
+                </fieldset>
+            </div>
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup">
+                    <legend>请选择您喜爱的颜色：</legend>
+                    <label for="red2">红色</label>
+                    <input type="checkbox" name="favcolor" id="red2" value="red">
+                    <label for="green2">绿色</label>
+                    <input type="checkbox" name="favcolor" id="green2" value="green">
+                    <label for="blue2">蓝色</label>
+                    <input type="checkbox" name="favcolor" id="blue2" value="blue">
+                </fieldset>
+            </div>
+            <input type="submit" data-inline="true" value="提交">
+
+            <h2>如果想要预先选中，请使用 HTML 中 input 的 checked 属性</h2>
+            <form method="post" action="demoform.asp">
+                <fieldset data-role="controlgroup">
+                    <legend>请选择您的性别：</legend>
+                    <label for="male3">Male</label>
+                    <input type="radio" name="gender" id="male3" value="male" checked>
+                    <label for="female3">Female</label>
+                    <input type="radio" name="gender" id="female3" value="female">
+                </fieldset>
+
+                <fieldset data-role="controlgroup">
+                    <legend>请选择您喜爱的颜色：</legend>
+                    <label for="red3">红色</label>
+                    <input type="checkbox" name="favcolor" id="red3" value="red" checked>
+                    <label for="green3">绿色</label>
+                    <input type="checkbox" name="favcolor" id="green3" value="green">
+                    <label for="blue3">蓝色</label>
+                    <input type="checkbox" name="favcolor" id="blue3" value="blue" checked>
+                </fieldset>
+                <input type="submit" data-inline="true" value="提交">
+            </form>
+        </form>
+
+        <h1>将表单放在弹窗中</h1>
+        <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">弹窗中使用表单</a>
+
+        <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+            <form method="post" action="demoform.php">
+                <div>
+                    <h3>登录信息</h3>
+                    <label for="usrnm" class="ui-hidden-accessible">用户名:</label>
+                    <input type="text" name="user" id="usrnm" placeholder="用户名">
+                    <label for="pswd" class="ui-hidden-accessible">密码:</label>
+                    <input type="password" name="passw" id="pswd" placeholder="密码">
+                    <label for="log">保存登录</label>
+                    <input type="checkbox" name="login" id="log" value="1" data-mini="true">
+                    <input type="submit" data-inline="true" value="登录">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+    <div data-role="footer" style="text-align:center;">
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Facebook上关注我</a>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Twitter上关注我</a>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Instagram上关注我</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--国内用户推荐使用百度CDN-->
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>jQuery Mobile 表单选择菜单</title>
+</head>
+<body>
+<!--<select> 元素创建带有若干选项的下拉列表。
+<select> 元素内的 <option> 元素定义了列表中的可用选项：
+提示：如果您有一个带有相关选项的很长的列表，请在 <select> 内使用 <optgroup> 元素
+
+自定义选择菜单
+本页顶部的图像，演示了移动平台上如何使用它们的方式展示一个选择菜单。
+如果您想要让选择菜单在所有的移动设备上都显示相同，请使用 jQuery 自带的自定义选择菜单，data-native-menu="false" 属性
+-->
+
+<div data-role="page" id="pageone">
+    <div data-role="panel" id="overlayPanel" data-display="overlay">
+        <h2>覆盖面板</h2>
+        <p>你可以使用按下 Esc 键、点击面板外部区域、通过滑动或点击下面按钮来关闭面板：</p>
+        <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">关闭面板</a>
+    </div>
+    <div data-role="panel" id="revealPanel" data-display="reveal">
+        <h2>滑出面板</h2>
+        <p>你可以使用按下 Esc 键、点击面板外部区域、通过滑动或点击下面按钮来关闭面板：</p>
+        <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">关闭面板</a>
+    </div>
+    <div data-role="panel" id="pushPanel" data-display="push">
+        <h2>推动面板</h2>
+        <p>你可以使用按下 Esc 键、点击面板外部区域、通过滑动或点击下面按钮来关闭面板：</p>
+        <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">关闭面板</a>
+    </div>
+
+    <div data-role="header">
+        <a href="#overlayPanel" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">主页</a>
+        <h1>欢迎访问我的主页</h1>
+        <a href="#revealPanel" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left">搜索</a>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <form method="post" action="demoform.asp">
+            <fieldset data-role="fieldcontain">
+                <label for="day">选择天</label>
+                <select name="day" id="day">
+                    <option value="mon">星期一</option>
+                    <option value="tue">星期二</option>
+                    <option value="wed">星期三</option>
+                    <option value="thu">星期四</option>
+                    <option value="fri">星期五</option>
+                    <option value="sat">星期六</option>
+                    <option value="sun">星期日</option>
+                </select>
+            </fieldset>
+
+            <p>如果您有一个带有相关选项的很长的列表，请在 select 内使用 optgroup 元素</p>
+            <fieldset data-role="fieldcontain">
+                <label for="day2">选择天</label>
+                <select name="day" id="day2">
+                    <optgroup label="工作日">
+                        <option value="mon">星期一</option>
+                        <option value="tue">星期二</option>
+                        <option value="wed">星期三</option>
+                        <option value="thu">星期四</option>
+                        <option value="fri">星期五</option>
+                    </optgroup>
+                    <optgroup label="周末">
+                        <option value="sat">星期六</option>
+                        <option value="sun">星期日</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+
+            <h2>自定义选择菜单</h2>
+            <p>如果想要让选择菜单在所有的移动设备上都显示相同，请使用 jQuery 自带的自定义选择菜单，data-native-menu="false" 属性</p>
+            <fieldset data-role="fieldcontain">
+                <label for="day3">选择天</label>
+                <select name="day" id="day3" data-native-menu="false">
+                    <option value="mon">星期一</option>
+                    <option value="tue">星期二</option>
+                    <option value="wed">星期三</option>
+                    <option value="thu">星期四</option>
+                    <option value="fri">星期五</option>
+                    <option value="sat">星期六</option>
+                    <option value="sun">星期日</option>
+                </select>
+            </fieldset>
+
+            <h2>多个选择 - 在 select 元素中使用 multiple 属性</h2>
+            <p>提示：如需为列表添加标题，请插入不包含 value 属性的 option 元素。</p>
+            <fieldset>
+                <label for="day4">您可以选择多天：</label>
+                <select name="day" id="day4" multiple="multiple" data-native-menu="false">
+                    <option>天</option>
+                    <option value="mon">星期一</option>
+                    <option value="tue">星期二</option>
+                    <option value="wed">星期三</option>
+                    <option value="thu">星期四</option>
+                    <option value="fri">星期五</option>
+                    <option value="sat">星期六</option>
+                    <option value="sun">星期日</option>
+                </select>
+            </fieldset>
+
+            <h2>如何组合一个或多个选择菜单 - 使用 data-role="controlgroup"</h2>
+            <div class="ui-field-contain">
+                <fieldset data-role="controlgroup">
+                    <legend>安排会议：</legend>
+                    <label for="day6">选择日期：</label>
+                    <select name="day" id="day6">
+                        <option value="mon">Monday</option>
+                        <option value="tue">Tuesday</option>
+                        <option value="wed">Wednesday</option>
+                        <option value="thu">Thursday</option>
+                        <option value="fri">Friday</option>
+                        <option value="sat">Saturday</option>
+                        <option value="sun">Sunday</option>
+                    </select>
+
+                    <label for="time">选择时间：</label>
+                    <select name="time" id="time">
+                        <option value="08">08:00</option>
+                        <option value="09">09:00</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                        <option value="16">16:00</option>
+                    </select>
+                </fieldset>
+            </div>
+
+            <h2>如何水平组合选择菜单 - 使用 data-type="horizontal"</h2>
+            <div class="ui-field-contain">
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>安排会议：</legend>
+                    <label for="day7">选择日期：</label>
+                    <select name="day" id="day7">
+                        <option value="mon">Monday</option>
+                        <option value="tue">Tuesday</option>
+                        <option value="wed">Wednesday</option>
+                        <option value="thu">Thursday</option>
+                        <option value="fri">Friday</option>
+                        <option value="sat">Saturday</option>
+                        <option value="sun">Sunday</option>
+                    </select>
+
+                    <label for="time7">选择时间：</label>
+                    <select name="time" id="time7">
+                        <option value="08">08:00</option>
+                        <option value="09">09:00</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                        <option value="16">16:00</option>
+                    </select>
+                </fieldset>
+            </div>
+
+            <h2>如何预选中一个选项 - 预选中选项</h2>
+            <div class="ui-field-contain">
+                <fieldset>
+                <label for="day8">选择日期</label>
+                <select name="day" id="day8">
+                    <option value="mon">Monday</option>
+                    <option value="tue">Tuesday</option>
+                    <option value="wed" selected>Wednesday</option>
+                    <option value="thu">Thursday</option>
+                    <option value="fri">Friday</option>
+                    <option value="sat">Saturday</option>
+                    <option value="sun">Sunday</option>
+                </select>
+                </fieldset>
+            </div>
+
+            <h2>如何缩小选项菜单 - 使用 data-type="mini"</h2>
+            <fieldset class="ui-field-contain">
+                <label for="day9">选取日期</label>
+                <select name="day" id="day9" data-mini="true">
+                    <option value="mon">Monday</option>
+                    <option value="tue">Tuesday</option>
+                    <option value="wed">Wednesday</option>
+                    <option value="thu">Thursday</option>
+                    <option value="fri">Friday</option>
+                    <option value="sat">Saturday</option>
+                    <option value="sun">Sunday</option>
+                </select>
+            </fieldset>
+
+            <h2>如何创建一个弹窗选项菜单 - 弹窗选项</h2>
+            <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">弹窗选择项</a>
+            <div data-role="popup" id="myPopup" class="ui-content" style="min-width:350px;">
+                <form method="post" action="demoform.asp">
+                    <fieldset class="ui-field-contain">
+                        <label for="day10">选择日期</label>
+                        <select name="day" id="day10">
+                            <option value="mon">Monday</option>
+                            <option value="tue">Tuesday</option>
+                            <option value="wed">Wednesday</option>
+                            <option value="thu">Thursday</option>
+                            <option value="fri">Friday</option>
+                            <option value="sat">Saturday</option>
+                            <option value="sun">Sunday</option>
+                        </select>
+                    </fieldset>
+                    <input type="submit" data-inline="true" value="提交">
+                </form>
+            </div>
+
+
+            <h2>如何创建可折叠表单 - 可折叠表单</h2>
+            <form method="post" action="demoform.asp">
+                <fieldset data-role="collapsible">
+                    <legend>点击我 - 我可以折叠！</legend>
+                    <label for="name">全名:</label>
+                    <input type="text" name="text" id="name">
+                    <p>喜欢的颜色:</p>
+                    <div data-role="controlgroup">
+                        <label for="red">Red</label>
+                        <input type="checkbox" name="favcolor" id="red" value="red">
+                        <label for="green">Green</label>
+                        <input type="checkbox" name="favcolor" id="green" value="green">
+                        <label for="blue">Blue</label>
+                        <input type="checkbox" name="favcolor" id="blue" value="blue">
+                    </div>
+                    <input type="submit" data-inline="true" value="提交">
+                </fieldset>
+            </form>
+
+            <h2>如何修改选项菜单图标 (默认为 "arrow-d") - 修改默认选择项图标</h2>
+            <form method="post" action="demoform.asp">
+                <fieldset data-role="controlgroup">
+                    <legend>该实例中，我们有两个可选择菜单。一个使用默认图标（向下方向箭头），另外一个是“加号”图标，我们可以使用 data-icon 属性来修改图标。</legend>
+                    <label for="day12">选择日期</label>
+                    <select name="day" id="day12">
+                        <option value="mon">Monday</option>
+                        <option value="tue">Tuesday</option>
+                    </select>
+
+                    <label for="time12">选择时间</label>
+                    <select name="time" id="time12" data-icon="plus">
+                        <option value="08">08:00</option>
+                        <option value="09">09:00</option>
+                    </select>
+                </fieldset>
+                <input type="submit" data-inline="true" value="Submit">
+            </form>
+
+            <h2>如何修改图标显示的位置 (默认向右) - 修改图标位置</h2>
+            <form method="post" action="demoform.asp">
+                <fieldset data-role="controlgroup">
+                    <legend>该实例中，我们修改图标的位置到选项的左边（默认为右边）。</legend>
+                    <label for="day13">选择日期</label>
+                    <select name="day" id="day13" data-iconpos="left">
+                        <option value="mon">Monday</option>
+                        <option value="tue">Tuesday</option>
+                    </select>
+                </fieldset>
+                <input type="submit" data-inline="true" value="提交">
+            </form>
+
+
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+    </div>
+
+    <div data-role="footer" style="text-align:center;">
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Facebook上关注我</a>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Twitter上关注我</a>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Instagram上关注我</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--国内用户推荐使用百度CDN-->
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>jQuery Mobile 表单滑动条</title>
+
+    <!--为滑块开关设置样式-->
+    <style>
+        /* Custom indentations are needed because the length of custom labels differs from
+           the length of the standard labels */
+        .custom-size-flipswitch.ui-flipswitch .ui-btn.ui-flipswitch-on {
+            text-indent: -4em;
+        }
+        .custom-size-flipswitch.ui-flipswitch .ui-flipswitch-off {
+            text-indent: 2em;
+        }
+        /* Custom widths are needed because the length of custom labels differs from
+           the length of the standard labels */
+        .custom-size-flipswitch.ui-flipswitch {
+            width: 8.875em;
+        }
+        .custom-size-flipswitch.ui-flipswitch.ui-flipswitch-active {
+            padding-left: 7em;
+            width: 1.875em;
+        }
+    </style>
+</head>
+<body>
+<!--jQuery Mobile 滑动条控件
+滑动条允许您从一个范围的数字中选择一个值
+如需创建滑动条，请使用 <input type="range">
+
+使用以下属性来规定限制：
+max - 规定允许的最大值
+min - 规定允许的最小值
+step - 规定合法的数字间隔
+value - 规定默认值
+提示: 如果你想在按钮中显示进度的值可以添加 data-show-value="true" 属性
+
+如果你想在滑动按钮上显示进度（类似一个小弹窗）可以使用 data-popup-enabled="true" 属性
+注释：  data-show-value="true"  与  data-popup-enabled="true" 可以同时使用
+提示：如果您想要高亮突出显示滑动条的值，请添加 data-highlight="true"
+
+拨动开关
+波动开关通常用于 on/off 或 true/false 按钮
+我们可以使用 <input type="checkbox"> 元素并指定 data-role 为 "flipswitch" 来创建开关
+默认情况下，开关切换的文本为 "On" 和 "Off"。你可以使用 data-on-text 和 data-off-text 属性来修改它
+提示:开关复选框可以使用 "checked" 属性来设置默认的选项
+-->
+
+<div data-role="page" id="pageone">
+    <!-- 侧边栏 和 导航栏 -->
+    <div data-role="panel" id="overlayPanel" data-display="overlay">
+        <h2>覆盖面板</h2>
+        <p>你可以使用按下 Esc 键、点击面板外部区域、通过滑动或点击下面按钮来关闭面板：</p>
+        <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">关闭面板</a>
+    </div>
+    <div data-role="panel" id="revealPanel" data-display="reveal">
+        <h2>滑出面板</h2>
+        <p>你可以使用按下 Esc 键、点击面板外部区域、通过滑动或点击下面按钮来关闭面板：</p>
+        <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">关闭面板</a>
+    </div>
+    <div data-role="panel" id="pushPanel" data-display="push">
+        <h2>推动面板</h2>
+        <p>你可以使用按下 Esc 键、点击面板外部区域、通过滑动或点击下面按钮来关闭面板：</p>
+        <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">关闭面板</a>
+    </div>
+
+    <div data-role="header">
+        <a href="#overlayPanel" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">主页</a>
+        <h1>欢迎访问我的主页</h1>
+        <a href="#revealPanel" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left">搜索</a>
+    </div>
+
+
+    <!-- 内容 -->
+    <div data-role="main" class="ui-content">
+        <h2>如果你想在按钮中显示进度的值可以添加 data-show-value="true" 属性</h2>
+        <p>如果你想在滑动按钮上显示进度（类似一个小弹窗）可以使用 data-popup-enabled="true" 属性</p>
+        <form method="post" action="demoform.asp">
+            <label for="points1">进度:</label>
+            <input type="range" name="points" id="points1" value="50" min="0" max="100" data-show-value="true" data-popup-enabled="true">
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+
+        <p>提示：如果您想要高亮突出显示滑动条的值，请添加 data-highlight="true"</p>
+        <form method="post" action="demoform.asp">
+            <label for="points2">进度:</label>
+            <input type="range" name="points" id="points2" value="50" min="0" max="100" data-highlight="true">
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+
+        <h1>拨动开关</h1>
+        <p>我们可以使用 input type="checkbox" 元素并指定 data-role 为 "flipswitch" 来创建开关</p>
+        <p>默认情况下，开关切换的文本为 "On" 和 "Off"。你可以使用 data-on-text 和 data-off-text 属性来修改它</p>
+        <form method="post" action="demoform.php">
+            <label for="switch1">切换开关:</label>
+            <input type="checkbox" data-role="flipswitch" name="switch" id="switch1">
+            <br>
+            <label for="switch2">修改开关切换的默认文本</label>
+            <input type="checkbox" data-role="flipswitch" name="switch" id="switch2" data-on-text="True" data-off-text="False">
+            <p>提示:开关复选框可以使用 "checked" 属性来设置默认的选项</p>
+            <label for="switch3">切换开关:</label>
+            <input type="checkbox" data-role="flipswitch" name="switch" id="switch3" checked>
+            <br>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+
+        <!--制作一个区间值的滑块-->
+        <h1>制作一个区间值的滑块 - 区间滑块</h1>
+        <form method="post" action="demoform.asp">
+            <div data-role="rangeslider">
+                <label for="price-min">价格:</label>
+                <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
+                <label for="price-max">价格:</label>
+                <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
+            </div>
+            <input type="submit" data-inline="true" value="Submit">
+            <p>区间滑块让用户选择指定区间的价格。</p>
+        </form>
+
+        <h1>为滑块开关设置样式 - 滑块样式</h1>
+        <form method="post" action="demoform.php">
+            <label for="switch">切换开关:</label>
+            <input type="checkbox" data-role="flipswitch" name="switch" id="switch" data-wrapper-class="custom-size-flipswitch">
+            <br>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+    </div>
+
+
+    <!-- 底部栏 -->
+    <div data-role="footer" style="text-align:center;">
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Facebook上关注我</a>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Twitter上关注我</a>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">在Instagram上关注我</a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
